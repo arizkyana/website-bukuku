@@ -1,9 +1,17 @@
+import Image from 'next/image';
+
 const Home: React.FC = () => {
   return (
     <>
       <nav className="bg-white shadow-sm fixed top-0 left-0 w-full">
         <div className="max-w-6xl mx-auto py-8 flex justify-between items-center">
-          <div>Logo</div>
+          <Image
+            alt="logo"
+            src="/images/logo.png"
+            className="block w-[45px] h-[45px] object-cover"
+            width={300}
+            height={300}
+          />
           <div>
             <ul className="inline-flex gap-3 justify-end items-center">
               <li>
@@ -30,24 +38,37 @@ const Home: React.FC = () => {
           id="banner"
           className="h-[30rem] flex justify-start items-start"
         >
-          <div className="bg-slate-400 h-full w-[40%]">
+          <div className=" h-full w-[40%]">
             <div className="w-full h-full p-6 flex flex-col justify-center gap-3 items-center">
+              <Image
+                alt="cta"
+                src="/images/cta.png"
+                className="block w-[10rem] h-[10rem] object-cover"
+                width={300}
+                height={300}
+              />
               <div className="text-center">
-                <h1 className="text-5xl">Headline</h1>
+                <h1 className="text-5xl">#Headline</h1>
                 <h2 className="text-3xl">Sub Headline</h2>
               </div>
-              <button
+              {/* <button
                 type="button"
                 // className="bg-white px-3 py-2 text-green-600 rounded-lg"
                 className="btn"
               >
                 CTA Here
-              </button>
+              </button> */}
             </div>
           </div>
           <div className="bg-slate-300 h-full w-[60%]">
             <div className="w-full h-full flex justify-center items-center">
-              <div>Banner Here</div>
+              <Image
+                alt="banner"
+                src="/images/banner.jpg"
+                className="block w-full h-full object-cover"
+                width={1440}
+                height={45}
+              />
             </div>
           </div>
         </section>
