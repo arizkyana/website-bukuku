@@ -1,3 +1,3 @@
-export const SUPABASE_URL = 'https://elyouywfluuedeezeydq.supabase.co';
+export const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
 export const SUPABASE_ANON_KEY =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVseW91eXdmbHV1ZWRlZXpleWRxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTMzMjY4MTksImV4cCI6MjAyODkwMjgxOX0.xn6GY0NuT7RazNJA5SPeQ5RQCp-7_Dyo9YwAqpftBec';
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
