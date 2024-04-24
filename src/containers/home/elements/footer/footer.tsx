@@ -60,7 +60,7 @@ const Footer: FC = () => {
       </div>
       <div className="bg-orange-500">
         <div className="max-w-6xl mx-auto py-3 font-bold text-white text-center">
-          Copyright © 2021 - All Right Reserved
+          Copyright © 2024 - All Right Reserved
         </div>
       </div>
     </footer>
