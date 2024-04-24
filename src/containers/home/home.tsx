@@ -2,41 +2,13 @@ import Image from 'next/image';
 
 import { Instagram } from 'react-feather';
 import Products from './elements/products';
+import Catalog from './elements/catalog';
+import Footer from './elements/footer';
 
 const Home: React.FC = () => {
   return (
     <>
-      <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-30">
-        <div className="max-w-6xl mx-auto py-4 flex justify-between items-center">
-          <Image
-            alt="logo"
-            src="/images/logo.png"
-            className="block w-[45px] h-[45px] object-cover"
-            width={300}
-            height={300}
-          />
-          <div>
-            <ul className="inline-flex gap-3 justify-end items-center">
-              <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
-                <a href="">Beranda</a>
-              </li>
-              <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
-                <a href="">Produk</a>
-              </li>
-              <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
-                <a href="">Katalog</a>
-              </li>
-              <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
-                <a href="">Program</a>
-              </li>
-              <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
-                <a href="">Kontak</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <main id="" className="pt-16">
+      <main id="" className="pt-12 min-h-screen">
         <section
           id="banner"
           className="h-[30rem] flex justify-start items-start"
@@ -76,27 +48,7 @@ const Home: React.FC = () => {
           </div>
         </section>
         <Products />
-        <section id="catalog" className="py-16">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl text-center mb-5 font-bold text-cyan-500">
-              Katalog
-            </h2>
-            <div className="w-full h-[15rem] grid grid-cols-4 gap-5 mb-5">
-              <div className="bg-slate-300"></div>
-              <div className="bg-slate-300"></div>
-              <div className="bg-slate-300"></div>
-              <div className="bg-slate-300"></div>
-            </div>
-          </div>
-          <div className="flex justify-center items-center">
-            <button
-              type="button"
-              className="btn bg-transparent hover:bg-cyan-500 hover:text-white text-cyan-500 border-cyan-600 "
-            >
-              Lihat Semua Katalog
-            </button>
-          </div>
-        </section>
+        {/* <Catalog /> */}
         <section id="about-us" className="py-16">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl text-center mb-5 font-bold text-cyan-500">
@@ -192,66 +144,6 @@ const Home: React.FC = () => {
           </div>
         </section>
       </main>
-      <footer className="bg-cyan-500 h-min w-full">
-        <div className="max-w-6xl mx-auto py-8">
-          <div className="grid grid-cols-2">
-            <div>
-              <Image
-                alt="logo-footer"
-                src="/images/cta.png"
-                width={300}
-                height={300}
-                className="w-[5rem] h-[5rem] object-cover block mb-3"
-              />
-              <ul className="inline-flex flex-col gap-2 text-white font-semibold">
-                <li className="hover:text-orange-500">
-                  <a href="">Beranda</a>
-                </li>
-                <li className="hover:text-orange-500">
-                  <a href="">Produk</a>
-                </li>
-                <li className="hover:text-orange-500">
-                  <a href="">Katalog</a>
-                </li>
-                <li className="hover:text-orange-500">
-                  <a href="">Program</a>
-                </li>
-                <li className="hover:text-orange-500">
-                  <a href="">Kontak</a>
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col items-end gap-3">
-              <h3 className="font-bold block text-white text-2xl">Follow Us</h3>
-              <div className="text-white hover:text-orange-500">
-                <a
-                  href="https://www.instagram.com/bukuku.club/"
-                  target="_blank"
-                  className="flex justify-end items-center gap-3 w-full"
-                >
-                  <Instagram />
-                  <span className=" font-bold">bukuku.club</span>
-                </a>
-              </div>
-              <div className="text-white hover:text-orange-500">
-                <a
-                  href="https://www.instagram.com/katalogbukuku.club/"
-                  target="_blank"
-                  className="flex justify-end items-center gap-3 w-full"
-                >
-                  <Instagram />
-                  <span className="font-bold">katalogbukuku.club</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="bg-orange-500">
-          <div className="max-w-6xl mx-auto py-3 font-bold text-white text-center">
-            Copyright © 2021 - All Right Reserved
-          </div>
-        </div>
-      </footer>
     </>
   );
 };

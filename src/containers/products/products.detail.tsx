@@ -4,9 +4,12 @@ import database from '@/utils/supabase';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { IProduct } from '../home/elements/products/products.types';
-import ProductsList from '../home/elements/products/products.list';
 
-const Product: React.FC = () => {
+interface IProductDetailProps {
+  id: string;
+}
+
+const ProductDetail: React.FC<IProductDetailProps> = ({ id }) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [data, setData] = useState<IProduct[]>([]);
   const [limit, setLimit] = useState<number>(10);
@@ -38,23 +41,30 @@ const Product: React.FC = () => {
   }, [limit]);
 
   return (
-    <div className="font-bold pt-14 min-h-screen">
-      <div className="max-w-6xl mx-auto pt-16">
+    <div className="font-bold pt-14">
+      <div className="max-w-6xl mx-auto pt-16 h-full">
         <div className="text-sm breadcrumbs mb-5">
           <ul>
             <li className="font-semibold text-slate-700">
               <Link href="/">Beranda</Link>
             </li>
-            <li>Produk</li>
+            <li className="font-semibold text-slate-700">
+              <Link href="/products">Produk</Link>
+            </li>
+            <li>Detail</li>
           </ul>
         </div>
-        <h2 className="text-3xl text-left mb-5 font-bold text-cyan-500">
-          {total} produk tersedia
-        </h2>
-        <ProductsList data={data} loading={loading} />
+        <div className="w-full min-h-screen bg-slate-50 p-3">
+          <div className="flex justify-between items-start gap-8">
+            <div className="h-[20rem] border flex-1"></div>
+            <div className="flex-1">
+              <h2>Produk Title</h2>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Product;
+export default ProductDetail;
