@@ -1,5 +1,7 @@
 import Image from 'next/image';
-import classNames from 'classnames';
+
+import { Instagram } from 'react-feather';
+import Products from './elements/products';
 
 const Home: React.FC = () => {
   return (
@@ -15,52 +17,30 @@ const Home: React.FC = () => {
           />
           <div>
             <ul className="inline-flex gap-3 justify-end items-center">
-              <li>
+              <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
                 <a href="">Beranda</a>
               </li>
-              <li>
+              <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
                 <a href="">Produk</a>
               </li>
-              <li>
+              <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
                 <a href="">Katalog</a>
               </li>
-              <li>
+              <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
                 <a href="">Program</a>
               </li>
-              <li>
+              <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
                 <a href="">Kontak</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      <main id="" className="pt-20">
+      <main id="" className="pt-16">
         <section
           id="banner"
           className="h-[30rem] flex justify-start items-start"
         >
-          <div className=" h-full w-[40%]">
-            <div className="w-full h-full p-6 flex flex-col justify-center gap-3 items-center">
-              <Image
-                alt="cta"
-                src="/images/cta.png"
-                className="block w-[10rem] h-[10rem] object-cover"
-                width={300}
-                height={300}
-              />
-              <div className="text-center">
-                <h1 className="text-5xl">#Headline</h1>
-                <h2 className="text-3xl">Sub Headline</h2>
-              </div>
-              {/* <button
-                type="button"
-                // className="bg-white px-3 py-2 text-green-600 rounded-lg"
-                className="btn"
-              >
-                CTA Here
-              </button> */}
-            </div>
-          </div>
           <div className="bg-slate-300 h-full w-[60%]">
             <div className="w-full h-full flex justify-center items-center">
               <Image
@@ -72,68 +52,35 @@ const Home: React.FC = () => {
               />
             </div>
           </div>
-        </section>
-        <section id="features" className="py-16">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl text-center mb-5">Produk</h2>
-            <div className="w-full h-[25rem] grid grid-cols-3 gap-5 mb-5">
-              {Array.from({ length: 3 }, (_, idx) => (
-                <div className="bg-slate-300 relative rounded-lg" key={idx}>
-                  <Image
-                    alt="produk-1"
-                    src="/images/produk-1.png"
-                    className="w-full h-full object-cover rounded-lg"
-                    width={600}
-                    height={900}
-                  />
-                  <div
-                    className={classNames(
-                      'opacity-0 z-5 absolute border top-0 left-0 w-full h-full rounded-lg bg-white transition-all duration-300 ease-in-out',
-                      { 'hover:opacity-100': true }
-                    )}
-                  >
-                    <div className="flex gap-1 p-3 text-xs flex-col">
-                      <span className="block font-bold">Nama Produk</span>
-                      <span className="block">Cakep</span>
-                    </div>
-                    <div className="flex gap-1 p-3 text-xs flex-col">
-                      <span className="block font-bold">Spesifikasi</span>
-                      <span className="block">
-                        Ukuran 20x15cm, softcover artpaper 260 gsm, 40 halaman
-                      </span>
-                    </div>
-                    <div className="flex gap-1 p-3 text-xs flex-col">
-                      <span className="block font-bold">Keterangan</span>
-                      <span className="block">
-                        Bukuku.Club berkolaborasi dengan Kataba Project
-                        meluncurkan buku panduan membuat pantun pertama di
-                        Indonesia yang ditujukan untuk anak-anak. Disusun secara
-                        menarik, penuh warna, dan interaktif. Dilengkapi dengan
-                        contoh pantun asli buatan anak-anak yang belajar bersama
-                        menggunakan materi dari buku ini.
-                      </span>
-                    </div>
-                  </div>
-                  <button
-                    type="button"
-                    className="btn z-10 absolute bottom-10 left-[7rem] text-white btn-success "
-                  >
-                    Pesan Sekarang
-                  </button>
-                </div>
-              ))}
+          <div className="h-full w-[40%] bg-orange-400">
+            <div className="w-full h-full p-6 flex flex-col justify-center gap-3 items-center">
+              <Image
+                alt="cta"
+                src="/images/cta.png"
+                className="block w-[10rem] h-[10rem] object-cover"
+                width={300}
+                height={300}
+              />
+              <div className="text-center text-white">
+                <h1 className="text-5xl font-bold">#Headline</h1>
+                <h2 className="text-3xl">Sub Headline</h2>
+              </div>
+              {/* <button
+                type="button"
+                // className="bg-white px-3 py-2 text-green-600 rounded-lg"
+                className="btn"
+              >
+                CTA Here
+              </button> */}
             </div>
-            {/* <div className="w-full h-[10rem] grid grid-cols-4 gap-5">
-              <div className="bg-slate-300"></div>
-              <div className="bg-slate-300"></div>
-              <div className="bg-slate-300"></div>
-              <div className="bg-slate-300"></div>
-            </div> */}
           </div>
         </section>
+        <Products />
         <section id="catalog" className="py-16">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl text-center mb-5">Katalog</h2>
+            <h2 className="text-3xl text-center mb-5 font-bold text-cyan-500">
+              Katalog
+            </h2>
             <div className="w-full h-[15rem] grid grid-cols-4 gap-5 mb-5">
               <div className="bg-slate-300"></div>
               <div className="bg-slate-300"></div>
@@ -141,14 +88,31 @@ const Home: React.FC = () => {
               <div className="bg-slate-300"></div>
             </div>
           </div>
+          <div className="flex justify-center items-center">
+            <button
+              type="button"
+              className="btn bg-transparent hover:bg-cyan-500 hover:text-white text-cyan-500 border-cyan-600 "
+            >
+              Lihat Semua Katalog
+            </button>
+          </div>
         </section>
         <section id="about-us" className="py-16">
           <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl text-center mb-5 font-bold text-cyan-500">
+              Tentang Kami
+            </h2>
             <div className="w-full min-h-[30rem] gap-3 flex justify-start items-stretch">
-              <div className="w-[40%] bg-slate-200">
-                <div>Image Here</div>
+              <div className="w-[40%]">
+                <Image
+                  alt="bubu"
+                  src="/images/bubu.png"
+                  width={1000}
+                  height={1300}
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="w-[60%]">
+              <div className="w-[60%] text-justify">
                 <p>
                   Berawal dari komunitas kecil yang diberi nama Bukuku.Club,
                   yaitu sebuah komunitas yang mendorong dan memfasiltasi
@@ -180,9 +144,12 @@ const Home: React.FC = () => {
         </section>
         <section id="program" className="py-16">
           <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl text-center mb-5 font-bold text-cyan-500">
+              Program Buku
+            </h2>
             <div className="w-full min-h-[30rem] gap-3 flex justify-start items-stretch">
               <div className="w-[60%]">
-                <p>
+                <p className="mb-1 text-justify">
                   Adalah program yang dirancang untuk mendampingi anak-anak
                   menyusun cerita dan gambar menjadi sebuah buku yang dapat
                   diwujudkan dalam bentuk buku cetak dan buku elektronik
@@ -190,7 +157,7 @@ const Home: React.FC = () => {
                   anak-anak belajar mempublikasikan, menjual atau berbagi karya
                   dalam bentuk buku
                 </p>
-                <p>
+                <p className="mb-1 text-justify">
                   Program Bikin Buku terbagi atas dua, yaitu Program Mula Bikin
                   Buku dan Program Laju Bikin Buku Program Mula ditujukan untuk
                   anak-anak yang akan membuat karya buku pertamanya bersama
@@ -198,19 +165,90 @@ const Home: React.FC = () => {
                   #kreatorbukukuclub, yaitu anak-anak yang sudah pernah membuat
                   buku bersama Bukuku.Club.
                 </p>
+                <div>
+                  Jika sudah tergabung sebagai #kreatorbukukuclub, maka ada
+                  beberapa hal seru yang bisa didapatkan, diantaranya:
+                  <ul className="list-disc list-inside">
+                    <li>Bisa mengikuti Program Laju Bikin Buku</li>
+                    <li>Bisa ikut acara Kumpul Kreator dengan gratis</li>
+                    <li>Bisa ikut pameran buku karya</li>
+                    <li>
+                      Bisa dilibatkan dalam berbagai acara (daring atau luring)
+                      yang melibatkan Bukuku.Club di berbagai skala.
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div className="w-[40%] bg-slate-200">
-                <div>Image Here</div>
+              <div className="w-[40%]">
+                <Image
+                  alt="bubu"
+                  src="/images/logo-program-buku.png"
+                  width={1000}
+                  height={1300}
+                  className="w-full h-[80%] object-contain"
+                />
               </div>
             </div>
           </div>
         </section>
       </main>
-      <footer className="bg-slate-500">
-        <div className="max-w-6xl mx-auto min-h-[20rem] py-3">footer</div>
-        <div className="bg-orange-300">
-          <div className="max-w-6xl mx-auto py-3 text-center">
-            Copy Right 2021 All Rights Reserved
+      <footer className="bg-cyan-500 h-min w-full">
+        <div className="max-w-6xl mx-auto py-8">
+          <div className="grid grid-cols-2">
+            <div>
+              <Image
+                alt="logo-footer"
+                src="/images/cta.png"
+                width={300}
+                height={300}
+                className="w-[5rem] h-[5rem] object-cover block mb-3"
+              />
+              <ul className="inline-flex flex-col gap-2 text-white font-semibold">
+                <li className="hover:text-orange-500">
+                  <a href="">Beranda</a>
+                </li>
+                <li className="hover:text-orange-500">
+                  <a href="">Produk</a>
+                </li>
+                <li className="hover:text-orange-500">
+                  <a href="">Katalog</a>
+                </li>
+                <li className="hover:text-orange-500">
+                  <a href="">Program</a>
+                </li>
+                <li className="hover:text-orange-500">
+                  <a href="">Kontak</a>
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col items-end gap-3">
+              <h3 className="font-bold block text-white text-2xl">Follow Us</h3>
+              <div className="text-white hover:text-orange-500">
+                <a
+                  href="https://www.instagram.com/bukuku.club/"
+                  target="_blank"
+                  className="flex justify-end items-center gap-3 w-full"
+                >
+                  <Instagram />
+                  <span className=" font-bold">bukuku.club</span>
+                </a>
+              </div>
+              <div className="text-white hover:text-orange-500">
+                <a
+                  href="https://www.instagram.com/katalogbukuku.club/"
+                  target="_blank"
+                  className="flex justify-end items-center gap-3 w-full"
+                >
+                  <Instagram />
+                  <span className="font-bold">katalogbukuku.club</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-orange-500">
+          <div className="max-w-6xl mx-auto py-3 font-bold text-white text-center">
+            Copyright © 2021 - All Right Reserved
           </div>
         </div>
       </footer>
