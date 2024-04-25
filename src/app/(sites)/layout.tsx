@@ -18,7 +18,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="light">
-      <head></head>
+      <head>
+        {/* <!-- Basic site information --> */}
+        <meta property="og:title" content="Bukuku Club" />
+        <meta
+          property="og:description"
+          content="Berawal dari komunitas kecil yang diberi nama Bukuku.Club, yaitu sebuah komunitas yang mendorong dan memfasiltasi anak-anak untuk berkarya dalam bentuk buku. Komunitas ini berdiri sejak tahun 2016."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.bukuku.club" />
+
+        {/* <!-- Image information --> */}
+        <meta property="og:image" content="/images/cta.png" />
+        <meta property="og:image:alt" content="Bukuku Club" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* <!-- Optional: If your website represents a company or an organization --> */}
+        <meta property="og:site_name" content="Bukuku Club" />
+      </head>
       <body className={inter.className}>
         <Navbar />
         {children}
