@@ -8,4 +8,8 @@ export interface IProduct {
   specification: string;
   order: string;
   images: string[];
+  type: string;
+  author?: string;
+  art_number?: number;
+  program_title?: string;
 }

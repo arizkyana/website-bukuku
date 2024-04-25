@@ -10,7 +10,7 @@ interface IProductDetailProps {
   id: string;
 }
 
-const ProductDetail: React.FC<IProductDetailProps> = ({ id }) => {
+const CatalogDetail: React.FC<IProductDetailProps> = ({ id }) => {
   const [data, setData] = useState<IProduct>();
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -21,7 +21,7 @@ const ProductDetail: React.FC<IProductDetailProps> = ({ id }) => {
         const product = await database
           .from('product')
           .select('*')
-          .filter('type', 'eq', 'product')
+          .filter('type', 'eq', 'catalog')
           .eq('id', id)
           .single();
         console.log('product > ', product);
@@ -46,7 +46,7 @@ const ProductDetail: React.FC<IProductDetailProps> = ({ id }) => {
               <Link href="/">Beranda</Link>
             </li>
             <li className="font-semibold text-slate-700">
-              <Link href="/products">Produk</Link>
+              <Link href="/catalogs">Katalog</Link>
             </li>
             <li>{data?.title}</li>
           </ul>
@@ -76,14 +76,22 @@ const ProductDetail: React.FC<IProductDetailProps> = ({ id }) => {
               </div>
               <div className="w-full h-full flex flex-col gap-5 my-8">
                 <div className="flex gap-1 flex-col">
-                  <span className="block font-bold">Nama Produk</span>
+                  <span className="block font-bold">Program</span>
+                  <span className="block font-normal">
+                    {data?.program_title}
+                  </span>
+                </div>
+                <div className="flex gap-1 flex-col">
+                  <span className="block font-bold">Nama Karya</span>
                   <span className="block font-normal">{data?.title}</span>
                 </div>
                 <div className="flex gap-1 flex-col">
-                  <span className="block font-bold">Spesifikasi</span>
-                  <span className="block font-normal">
-                    {data?.specification}
-                  </span>
+                  <span className="block font-bold">Author</span>
+                  <span className="block font-normal">{data?.author}</span>
+                </div>
+                <div className="flex gap-1 flex-col">
+                  <span className="block font-bold">Karya Buku ke</span>
+                  <span className="block font-normal">{data?.art_number}</span>
                 </div>
                 <div className="flex gap-1 flex-col">
                   <span className="block font-bold">Keterangan</span>
@@ -100,4 +108,4 @@ const ProductDetail: React.FC<IProductDetailProps> = ({ id }) => {
   );
 };
 
-export default ProductDetail;
+export default CatalogDetail;

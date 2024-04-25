@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { FC } from 'react';
 import { Instagram } from 'react-feather';
 
@@ -17,19 +18,19 @@ const Footer: FC = () => {
             />
             <ul className="inline-flex flex-col gap-2 text-white font-semibold">
               <li className="hover:text-orange-500">
-                <a href="">Beranda</a>
+                <Link href="/">Beranda</Link>
               </li>
               <li className="hover:text-orange-500">
-                <a href="">Produk</a>
-              </li>
-              {/* <li className="hover:text-orange-500">
-                <a href="">Katalog</a>
-              </li> */}
-              <li className="hover:text-orange-500">
-                <a href="">Program</a>
+                <Link href="/products">Produk</Link>
               </li>
               <li className="hover:text-orange-500">
-                <a href="">Kontak</a>
+                <Link href="/catalogs">Katalog</Link>
+              </li>
+              <li className="hover:text-orange-500">
+                <a href="#programs">Program</a>
+              </li>
+              <li className="hover:text-orange-500">
+                <Link href="/contact">Kontak</Link>
               </li>
             </ul>
           </div>

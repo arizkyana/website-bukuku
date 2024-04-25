@@ -18,19 +18,19 @@ const Navbar: FC = () => {
         <div>
           <ul className="inline-flex gap-3 justify-end items-center">
             <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
-              <a href="">Beranda</a>
+              <Link href="/">Beranda</Link>
             </li>
             <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
-              <a href="">Produk</a>
-            </li>
-            {/* <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
-                <a href="">Katalog</a>
-              </li> */}
-            <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
-              <a href="">Program</a>
+              <a href="#products">Produk</a>
             </li>
             <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
-              <a href="">Kontak</a>
+              <a href="#catalogs">Katalog</a>
+            </li>
+            <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
+              <a href="#program">Program</a>
+            </li>
+            <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
+              <Link href="/contact">Kontak</Link>
             </li>
           </ul>
         </div>

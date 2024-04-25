@@ -1,9 +1,6 @@
 import Image from 'next/image';
-
-import { Instagram } from 'react-feather';
 import Products from './elements/products';
-import Catalog from './elements/catalog';
-import Footer from './elements/footer';
+import Catalogs from './elements/catalogs';
 
 const Home: React.FC = () => {
   return (
@@ -48,7 +45,7 @@ const Home: React.FC = () => {
           </div>
         </section>
         <Products />
-        {/* <Catalog /> */}
+        <Catalogs />
         <section id="about-us" className="py-16">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl text-center mb-5 font-bold text-cyan-500">
