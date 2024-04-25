@@ -7,8 +7,8 @@ const Footer: FC = () => {
   return (
     <footer className="bg-cyan-500 h-min w-full">
       <div className="max-w-6xl mx-auto py-8">
-        <div className="grid grid-cols-2">
-          <div>
+        <div className="grid lg:grid-cols-2 grid-cols-1 lg:p-0 p-3">
+          <div className="flex flex-col justify-center items-center lg:justify-start lg:items-start">
             <Image
               alt="logo-footer"
               src="/images/cta.png"
@@ -34,7 +34,7 @@ const Footer: FC = () => {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col items-end gap-3">
+          <div className="flex flex-col lg:items-end items-center mt-8 lg:mt-0 gap-3">
             <h3 className="font-bold block text-white text-2xl">Follow Us</h3>
             <div className="text-white hover:text-orange-500">
               <a

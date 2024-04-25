@@ -13,7 +13,7 @@ interface ICatalogsListProps {
 
 const CatalogsList: FC<ICatalogsListProps> = ({ data, loading }) => {
   return (
-    <div className="w-full grid grid-cols-3 gap-5 mb-5">
+    <div className="w-full grid lg:grid-cols-3 grid-cols-1 gap-5 mb-5">
       {loading
         ? Array.from({ length: 3 }, (_, idx) => (
             <div

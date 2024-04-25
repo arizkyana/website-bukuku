@@ -39,7 +39,7 @@ const CatalogDetail: React.FC<IProductDetailProps> = ({ id }) => {
 
   return (
     <div className="font-bold pt-14">
-      <div className="max-w-6xl mx-auto pt-16 h-full">
+      <div className="max-w-6xl mx-auto pt-16 h-full lg:px-0 px-3">
         <div className="text-sm breadcrumbs mb-5">
           <ul>
             <li className="font-semibold text-slate-700">
@@ -52,7 +52,7 @@ const CatalogDetail: React.FC<IProductDetailProps> = ({ id }) => {
           </ul>
         </div>
         <div className="w-full min-h-screen bg-slate-50 p-3">
-          <div className="flex justify-between items-start gap-8">
+          <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
             <div className="h-[20rem] flex-1 bg-white">
               <Image
                 alt={`product-${id}`}

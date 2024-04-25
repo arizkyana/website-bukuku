@@ -9,7 +9,7 @@ import ProductsList from '../home/elements/products/products.list';
 const Product: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [data, setData] = useState<IProduct[]>([]);
-  const [limit, setLimit] = useState<number>(10);
+  const [limit, setLimit] = useState<number>(999);
   const [total, setTotal] = useState<number>(0);
   useEffect(() => {
     const fetchData = async () => {
@@ -41,7 +41,7 @@ const Product: React.FC = () => {
 
   return (
     <div className="font-bold pt-14 min-h-screen">
-      <div className="max-w-6xl mx-auto pt-16">
+      <div className="max-w-6xl mx-auto pt-16 px-3 lg:px-0">
         <div className="text-sm breadcrumbs mb-5">
           <ul>
             <li className="font-semibold text-slate-700">

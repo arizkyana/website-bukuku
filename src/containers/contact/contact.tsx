@@ -5,7 +5,7 @@ import { Phone, Instagram, Mail } from 'react-feather';
 const Contact: FC = () => {
   return (
     <div className="font-bold pt-14 min-h-screen">
-      <div className="max-w-6xl mx-auto pt-16">
+      <div className="max-w-6xl mx-auto pt-16 lg:px-0 px-3">
         <div className="text-sm breadcrumbs mb-5">
           <ul>
             <li className="font-semibold text-slate-700">

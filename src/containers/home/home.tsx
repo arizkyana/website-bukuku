@@ -5,12 +5,12 @@ import Catalogs from './elements/catalogs';
 const Home: React.FC = () => {
   return (
     <>
-      <main id="" className="pt-12 min-h-screen">
+      <main id="" className="lg:pt-12 pt-16 min-h-screen">
         <section
           id="banner"
-          className="h-[30rem] flex justify-start items-start"
+          className="lg:h-[30rem] h-min flex lg:flex-row flex-col-reverse justify-start items-start"
         >
-          <div className="bg-slate-300 h-full w-[60%]">
+          <div className="bg-slate-300 lg:h-full h-[15rem] lg:w-[60%] w-full">
             <div className="w-full h-full flex justify-center items-center">
               <Image
                 alt="banner"
@@ -21,7 +21,7 @@ const Home: React.FC = () => {
               />
             </div>
           </div>
-          <div className="h-full w-[40%] bg-orange-400">
+          <div className="h-full lg:w-[40%] w-full bg-orange-400">
             <div className="w-full h-full p-6 flex flex-col justify-center gap-3 items-center">
               <Image
                 alt="cta"
@@ -51,8 +51,8 @@ const Home: React.FC = () => {
             <h2 className="text-3xl text-center mb-5 font-bold text-cyan-500">
               Tentang Kami
             </h2>
-            <div className="w-full min-h-[30rem] gap-3 flex justify-start items-stretch">
-              <div className="w-[40%]">
+            <div className="w-full p-3 lg:p-0 min-h-[30rem] gap-3 flex lg:flex-row flex-col justify-start items-stretch">
+              <div className="lg:w-[40%] w-full">
                 <Image
                   alt="bubu"
                   src="/images/bubu.png"
@@ -61,7 +61,7 @@ const Home: React.FC = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="w-[60%] text-justify">
+              <div className="lg:w-[60%] w-full text-justify">
                 <p>
                   Berawal dari komunitas kecil yang diberi nama Bukuku.Club,
                   yaitu sebuah komunitas yang mendorong dan memfasiltasi
@@ -96,8 +96,8 @@ const Home: React.FC = () => {
             <h2 className="text-3xl text-center mb-5 font-bold text-cyan-500">
               Program Buku
             </h2>
-            <div className="w-full min-h-[30rem] gap-3 flex justify-start items-stretch">
-              <div className="w-[60%]">
+            <div className="w-full min-h-[30rem] gap-3 p-3 lg:p-0 flex lg:flex-row flex-col-reverse justify-start items-stretch">
+              <div className="lg:w-[60%] w-full">
                 <p className="mb-1 text-justify">
                   Adalah program yang dirancang untuk mendampingi anak-anak
                   menyusun cerita dan gambar menjadi sebuah buku yang dapat
@@ -128,7 +128,7 @@ const Home: React.FC = () => {
                   </ul>
                 </div>
               </div>
-              <div className="w-[40%]">
+              <div className="lg:w-[40%] w-full">
                 <Image
                   alt="bubu"
                   src="/images/logo-program-buku.png"
