@@ -27,7 +27,7 @@ const Footer: FC = () => {
                 <Link href="/catalogs">Katalog</Link>
               </li>
               <li className="hover:text-orange-500">
-                <a href="#programs">Program</a>
+                <a href="/#program">Program</a>
               </li>
               <li className="hover:text-orange-500">
                 <Link href="/contact">Kontak</Link>

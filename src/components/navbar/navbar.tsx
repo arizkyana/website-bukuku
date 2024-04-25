@@ -68,7 +68,7 @@ const Navbar: FC = () => {
               <a href="#catalogs">Katalog</a>
             </li>
             <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
-              <a href="#program">Program</a>
+              <a href="/#program">Program</a>
             </li>
             <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
               <Link href="/contact">Kontak</Link>
