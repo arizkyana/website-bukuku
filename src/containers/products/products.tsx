@@ -16,7 +16,7 @@ const Product: React.FC = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        if (search) {
+        if (search && search.length >= 3) {
           const products = await database
             .from('product')
             .select('*')
@@ -82,6 +82,7 @@ const Product: React.FC = () => {
                 className="grow text-slate-600"
                 placeholder="Cari Judul Buku"
                 onChange={(e) => setSearch(e.target.value)}
+                value={search}
               />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -99,10 +100,14 @@ const Product: React.FC = () => {
           </div>
         </div>
         {search && data.length === 0 && (
-          <div className="flex flex-col justify-center items-center gap-2 my-3 border lg:w-[50%] w-full mx-auto overflow-hidden">
+          <div className="flex flex-col justify-center items-center gap-2 my-3 lg:w-[50%] w-full mx-auto overflow-hidden">
             <h3>{`Nama Author "${search}" tidak ditemukan`}</h3>
             <h4>Silahkan gunakan kata kunci lain</h4>
-            <button type="button" className="btn btn-sm btn-outline btn-info">
+            <button
+              type="button"
+              className="btn btn-sm btn-outline btn-info"
+              onClick={() => setSearch('')}
+            >
               Ulangi Pencarian
             </button>
           </div>
