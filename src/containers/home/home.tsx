@@ -1,49 +1,13 @@
 import Image from 'next/image';
 import Products from './elements/products';
 import Catalogs from './elements/catalogs';
+import Banner from './elements/banner';
 
 const Home: React.FC = () => {
   return (
     <>
-      <main id="" className="lg:pt-12 pt-16 min-h-screen">
-        <section
-          id="banner"
-          className="lg:h-[30rem] h-min flex lg:flex-row flex-col-reverse justify-start items-start"
-        >
-          <div className="bg-slate-300 lg:h-full h-[15rem] lg:w-[60%] w-full">
-            <div className="w-full h-full flex justify-center items-center">
-              <Image
-                alt="banner"
-                src="/images/banner.jpg"
-                className="block w-full h-full object-cover"
-                width={1440}
-                height={45}
-              />
-            </div>
-          </div>
-          <div className="h-full lg:w-[40%] w-full bg-orange-400">
-            <div className="w-full h-full p-6 flex flex-col justify-center gap-3 items-center">
-              <Image
-                alt="cta"
-                src="/images/cta.png"
-                className="block w-[10rem] h-[10rem] object-cover"
-                width={300}
-                height={300}
-              />
-              <div className="text-center text-white">
-                <h1 className="text-5xl font-bold">#Headline</h1>
-                <h2 className="text-3xl">Sub Headline</h2>
-              </div>
-              {/* <button
-                type="button"
-                // className="bg-white px-3 py-2 text-green-600 rounded-lg"
-                className="btn"
-              >
-                CTA Here
-              </button> */}
-            </div>
-          </div>
-        </section>
+      <main id="" className="lg:pt-12 min-h-screen">
+        <Banner />
         <Products />
         <Catalogs />
         <section id="about-us" className="py-16">

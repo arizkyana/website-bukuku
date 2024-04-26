@@ -30,7 +30,7 @@ const NavbarMobile: FC = () => {
             <Link href="/catalogs">Katalog</Link>
           </li>
           <li className="hover:text-orange-500">
-            <a href="#programs">Program</a>
+            <a href="/#program">Program</a>
           </li>
           <li className="hover:text-orange-500">
             <Link href="/contact">Kontak</Link>
@@ -66,6 +66,9 @@ const Navbar: FC = () => {
             </li>
             <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
               <a href="#catalogs">Katalog</a>
+            </li>
+            <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
+              <a href="/#about-us">Tentang Kami</a>
             </li>
             <li className="hover:border-b-2 hover:text-cyan-500 hover:font-bold border-cyan-500">
               <a href="/#program">Program</a>

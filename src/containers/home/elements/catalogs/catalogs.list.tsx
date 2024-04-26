@@ -13,11 +13,11 @@ interface ICatalogsListProps {
 
 const CatalogsList: FC<ICatalogsListProps> = ({ data, loading }) => {
   return (
-    <div className="w-full grid lg:grid-cols-3 grid-cols-1 gap-5 mb-5">
+    <div className="w-full grid lg:grid-cols-3 grid-cols-1 gap-5 mb-5 lg:p-0 p-3">
       {loading
         ? Array.from({ length: 3 }, (_, idx) => (
             <div
-              className="bg-slate-100 h-[30rem] rounded-lg animate-pulse"
+              className="bg-slate-100 h-[15rem] rounded-lg animate-pulse"
               key={idx}
             ></div>
           ))
@@ -27,7 +27,7 @@ const CatalogsList: FC<ICatalogsListProps> = ({ data, loading }) => {
               idx
             ) => (
               <div
-                className="bg-slate-300 h-[30rem] relative rounded-lg"
+                className="bg-slate-300 h-[20rem] relative rounded-lg"
                 key={idx}
               >
                 <Image
@@ -45,21 +45,23 @@ const CatalogsList: FC<ICatalogsListProps> = ({ data, loading }) => {
                   )}
                 >
                   <div className="relative h-full w-full">
-                    <div className="rounded-lg bg-white w-full h-[80%] absolute bottom-0 left-0">
+                    <div className="rounded-lg bg-white w-full h-full absolute bottom-0 left-0">
                       <div className="relative w-full h-full">
                         <div className="flex gap-1 p-3 text-xs flex-col">
                           <span className="block font-bold">Nama Karya</span>
                           <span className="block font-normal">{title}</span>
                         </div>
-                        <div className="flex gap-1 p-3 text-xs flex-col">
-                          <span className="block font-bold">Author</span>
-                          <span className="block font-normal">{author}</span>
-                        </div>
-                        <div className="flex gap-1 p-3 text-xs flex-col">
-                          <span className="block font-bold">Karya Buku ke</span>
-                          <span className="block font-normal">
-                            {art_number}
-                          </span>
+                        <div className="flex justify-between items-center">
+                          <div className="flex gap-1 p-3 text-xs flex-col">
+                            <span className="block font-bold">Author</span>
+                            <span className="block font-normal">{author}</span>
+                          </div>
+                          <div className="flex gap-1 p-3 text-xs flex-col">
+                            <span className="block font-bold">Karya ke</span>
+                            <span className="block font-normal">
+                              {art_number}
+                            </span>
+                          </div>
                         </div>
                         <div className="flex gap-1 p-3 text-xs flex-col max-h-[10rem]">
                           <span className="block font-bold">Keterangan</span>

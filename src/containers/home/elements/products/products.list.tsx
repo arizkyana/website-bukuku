@@ -13,7 +13,7 @@ interface IProductsListProps {
 
 const ProductsList: FC<IProductsListProps> = ({ data, loading }) => {
   return (
-    <div className="w-full grid lg:grid-cols-3 grid-cols-1 gap-5 mb-5">
+    <div className="w-full grid lg:grid-cols-3 grid-cols-1 gap-5 mb-5 lg:p-0 p-3">
       {loading
         ? Array.from({ length: 3 }, (_, idx) => (
             <div

@@ -27,6 +27,9 @@ const Footer: FC = () => {
                 <Link href="/catalogs">Katalog</Link>
               </li>
               <li className="hover:text-orange-500">
+                <a href="/#about-us">Tentang Kami</a>
+              </li>
+              <li className="hover:text-orange-500">
                 <a href="/#program">Program</a>
               </li>
               <li className="hover:text-orange-500">
