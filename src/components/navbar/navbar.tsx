@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { FC } from 'react';
-import { AlignJustify } from 'react-feather';
+import Image from "next/image";
+import Link from "next/link";
+import { FC } from "react";
+import { AlignJustify } from "react-feather";
 
 const NavbarMobile: FC = () => {
   return (
@@ -21,19 +21,22 @@ const NavbarMobile: FC = () => {
         ></label>
         <ul className="menu p-4 w-80 min-h-full bg-white text-base-content">
           <li className="hover:text-orange-500">
-            <Link href="/">Beranda</Link>
+            <a href="/">Beranda</a>
           </li>
           <li className="hover:text-orange-500">
-            <Link href="/products">Produk</Link>
+            <a href="/products">Produk</a>
           </li>
           <li className="hover:text-orange-500">
-            <Link href="/catalogs">Katalog</Link>
+            <a href="/catalogs">Katalog</a>
+          </li>
+          <li className="hover:text-orange-500">
+            <a href="/#about-us">Tentang Kami</a>
           </li>
           <li className="hover:text-orange-500">
             <a href="/#program">Program</a>
           </li>
           <li className="hover:text-orange-500">
-            <Link href="/contact">Kontak</Link>
+            <a href="/contact">Kontak</a>
           </li>
         </ul>
       </div>
